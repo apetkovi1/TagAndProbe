@@ -170,7 +170,8 @@ if  args.doPlot:
     if args.altBkg : 
         fileName = sampleToFit.altBkgFit
         fitType  = 'altBkgFit'
-        
+
+    print('hadd -f %s %s' % (fileName, fileName.replace('.root', '-*.root')))    
     os.system('hadd -f %s %s' % (fileName, fileName.replace('.root', '-*.root')))
 
     plottingDir = '%s/plots/%s/%s' % (outputDirectory,sampleToFit.name,fitType)
@@ -203,8 +204,8 @@ if args.sumUp:
 
     #if not tnpConf.samplesDef['mcAlt' ] is None:
     #    info['mcAlt'    ] = tnpConf.samplesDef['mcAlt' ].histFile
-    if not tnpConf.samplesDef['tagSel'] is None:
-        info['tagSel'   ] = tnpConf.samplesDef['tagSel'].histFile
+    #if not tnpConf.samplesDef['tagSel'] is None:
+     #   info['tagSel'   ] = tnpConf.samplesDef['tagSel'].histFile
 
     effis = None
     effFileName ='%s/egammaEffi.txt' % outputDirectory 

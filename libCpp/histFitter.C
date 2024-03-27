@@ -13,6 +13,8 @@
 /// include pdfs
 #include "RooCBExGaussShape.h"
 #include "RooCMSShape.h"
+#include "RooChebychev.h"
+#include "RooPolynomial.h"
 
 #include <vector>
 #include <string>

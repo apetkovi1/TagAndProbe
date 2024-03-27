@@ -18,7 +18,8 @@ eosUL2017 = '/eos/cms/store/group/phys_egamma/tnpTuples/tomc/2020-05-20/UL2017/m
 eosUL2018 = '/eos/cms/store/group/phys_egamma/tnpTuples/tomc/2020-05-20/UL2018/merged/'
 
 #Run3
-eosRun3 = '/eos/cms/store/group/phys_egamma/ec/fmausolf/EGM_comm/'
+#eosRun3 = '/eos/cms/store/group/phys_egamma/ec/fmausolf/EGM_comm/'
+eosRun3 = '/eos/user/a/anpetkov/'
 
 eos_Run3_124X = '/eos/cms/store/group/phys_egamma/tnpTuples/bjoshi/2023-04-25/2022/'
 eos_Run3_PromptReco = '/eos/cms/store/group/phys_egamma/tnpTuples/bjoshi/2023-04-25/2022/'
@@ -148,23 +149,24 @@ UL2018 = {
 }
 
 Run3 = {
-    'DY_madgraph'              : tnpSample('DY_madgraph',
-                                       eosRun3 + 'DYToEE_M-50_NNPDF31_TuneCP5_13p6TeV-powheg-pythia8_EleID_PhoID/DYToEE_M-50_NNPDF31_TuneCP5_13p6TeV-powheg-pythia8/DYToEE_M-50_NNPDF31_TuneCP5_13p6TeV-powheg-pythia8_EleID_PhoID/221018_080249/0000/merged.root',
+    'DYto2E_powheg_preEE'              : tnpSample('DYto2E_powheg_preEE',
+                                       '~/TagAndProbe/TnPtuples2022/DYto2E_powheg_preEE.root',
                                        isMC = True, nEvts =  -1 ),
-#    'DY_amcatnlo'                 : tnpSample('DY_amcatnlo',
-#                                       eosUL2017 + 'DYJetsToLLM50amcatnloFXFX.root',
-#                                       isMC = True, nEvts =  -1 ),
-#    'DY_amcatnloext'                 : tnpSample('DY_amcatnloext',
-#                                       eosUL2017 + 'DYJetsToLL_amcatnloFXFX.root',
-#                                       isMC = True, nEvts =  -1 ),
+    'DY_amcatnlo_preEE'              : tnpSample('DY_amcatnlo_preEE',
+                                       '~/TagAndProbe/TnPtuples2022/DY_amcatnlo_preEE.root',
+                                       isMC = True, nEvts =  -1 ),
+    'DYto2E_powheg_postEE'             : tnpSample('DYto2E_powheg_postEE',
+                                       '~/TagAndProbe/TnPtuples2022/DYto2E_powheg_postEE.root',
+                                       isMC = True, nEvts =  -1 ),
+    'DY_amcatnlo_postEE'             : tnpSample('DY_amcatnlo_postEE',
+                                       '~/TagAndProbe/TnPtuples2022/DY_amcatnlo_postEE.root',
+                                       isMC = True, nEvts =  -1 ),
 
-
-    'data_Run3B' : tnpSample('data_Run3B' , eosRun3 + 'ntuple_Run3_data_2022B_EleID_PhoID/data/EGamma/crab_Egamma2022B_EleID_PhoID/221012_155735/0000/merged.root' , lumi = 0.086),
-    'data_Run3C' : tnpSample('data_Run3C' , eosRun3 + 'ntuple_Run3_data_2022C_EleID_PhoID/data/EGamma/crab_Egamma2022C_EleID_PhoID/221014_145533/0000/merged.root' , lumi = 4.45),
-    'data_Run3D' : tnpSample('data_Run3D' , eosRun3 + 'ntuple_Run3_data_2022D_EleID_PhoID/data/EGamma/crab_Egamma2022D_EleID_PhoID/221014_145636/0000/merged.root' , lumi = 0.912),
-    'data_Run3E' : tnpSample('data_Run3E' , eosRun3 + 'ntuple_Run3_data_2022E_EleID_PhoID/data/EGamma/crab_Egamma2022E_EleID_PhoID/221018_073725/0000/merged.root' , lumi = 2.08),
-    'data_Run3F' : tnpSample('data_Run3F' , eosRun3 + 'ntuple_Run3_data_2022F_EleID_PhoID/data/EGamma/crab_Egamma2022F_EleID_PhoID/221114_171125/0000/merged.root' , lumi = 4.99),
-    'data_Run3G' : tnpSample('data_Run3G' , eosRun3 + 'ntuple_Run3_data_2022G_EleID_PhoID/data/EGamma/crab_Egamma2022G_EleID_PhoID/221211_201213/0000/merged.root' , lumi = 2.43),
+    'data_Run3C' : tnpSample('data_Run3C' ,  '~/TagAndProbe/TnPtuples2022/Run2022C_merged.root' , lumi = 5.0104  ),
+    'data_Run3D' : tnpSample('data_Run3D' ,  '~/TagAndProbe/TnPtuples2022/Run2022D_merged.root' , lumi = 2.97),
+    'data_Run3E' : tnpSample('data_Run3E' ,  '~/TagAndProbe/TnPtuples2022/Run2022E_merged.root' , lumi = 5.807 ),
+    'data_Run3F' : tnpSample('data_Run3F' ,  '~/TagAndProbe/TnPtuples2022/Run2022F_merged.root' , lumi = 17.7819 ),
+    'data_Run3G' : tnpSample('data_Run3G' ,  '~/TagAndProbe/TnPtuples2022/Run2022G_merged.root' , lumi = 3.0828),
 }
 
 
